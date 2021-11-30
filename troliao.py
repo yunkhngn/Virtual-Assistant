@@ -17,8 +17,8 @@ screen.config(bg=COLOR)
 screen.lift()
 screen.attributes('-topmost', True)
 
-Avatar = PhotoImage(file="agent.png")
-UserAvatar = PhotoImage(file="user.png")
+Avatar = PhotoImage(file="photo/agent.png")
+UserAvatar = PhotoImage(file="photo/user.png")
 
 def getLocation():
     url = "http://ipinfo.io/"
