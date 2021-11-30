@@ -9,37 +9,6 @@ TEXTCOLOR = "white"
 AGENTNAME = "Siri Phake"
 USERNAME = "Khoa"
 
-#please make a function to get username and dump it into a txt file and make it as USERNAME
-def getUserName():
-    global USERNAME
-
-    getname = Tk()
-    getname.title("Get your name")
-    getname.geometry("300x100")
-    getname.config(bg=COLOR)
-
-    nameLabel = Label(getname, text="Please enter your name:", bg=COLOR, fg=TEXTCOLOR)
-    nameLabel.grid(row=0, column=0, padx=10, pady=10)
-
-    nameEntry = Entry(getname, width=30)
-    nameEntry.grid(row=1, column=0, padx=10, pady=10)
-
-    submit = Button(getname, text="Submit", command=lambda: getname.destroy())
-    submit.grid(row=2, column=0, padx=10, pady=10)
-
-    USERNAME = nameEntry.get()  
-    file = open("name.txt", "w")
-    file.write(USERNAME)
-    file.close()
-    getname.lift()
-    getname.attributes('-topmost', True)
-def checkUserName():
-    global USERNAME
-    with open("name.txt", "r") as f:
-        USERNAME = f.read()
-    if USERNAME == "":
-        getUserName()
-
 screen = Tk()
 screen.title(AGENTNAME + " - Virtual Agent")
 screen.geometry("350x667")
@@ -128,8 +97,6 @@ def welcome():
 
     agentName = Label(welcomeFrame, text=AGENTNAME, font=("segoe ui",7), bg=COLOR, fg=TEXTCOLOR)
     agentName.grid(row=1, column=0)
-
-    # checkUserName()
 def userWrite():
     global textEntry
     userFrame = Frame(chatbox, width=500, height=50, bg=COLOR)
