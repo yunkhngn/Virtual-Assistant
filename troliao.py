@@ -7,7 +7,8 @@ import speech_recognition as sr
 COLOR = "#0f0f0f"
 TEXTCOLOR = "white"
 AGENTNAME = "Siri Phake"
-USERNAME = "Khoa"
+USERNAME = 'Khoa Nguyen'
+
 
 screen = Tk()
 screen.title(AGENTNAME + " - Virtual Agent")
