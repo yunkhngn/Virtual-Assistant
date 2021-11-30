@@ -51,14 +51,6 @@ screen.attributes('-topmost', True)
 Avatar = PhotoImage(file="agent.png")
 UserAvatar = PhotoImage(file="user.png")
 
-def wikiSearch():
-    userNeed = textEntry.get().lower()
-    if "wikipedia" in userNeed:
-        userNeed = userNeed.replace("wikipedia", "")
-        userNeed = userNeed.replace(" ", "_")
-        url = "https://en.wikipedia.org/wiki/" + userNeed
-        webbrowser.open(url)
-
 def getLocation():
     url = "http://ipinfo.io/"
     response = requests.get(url)
