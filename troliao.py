@@ -176,7 +176,7 @@ chatbox = Frame(screen, width=500, height=400, bg=COLOR)
 chatbox.pack(fill=X, padx=20)
 
 textMessage = Frame(screen, bg=COLOR)
-textMessage.pack(fill=X, side=BOTTOM, padx=20, pady=(10,30))
+textMessage.pack(fill=X, side=BOTTOM, padx=20, pady=(30,30))
 
 textEntry = Entry(textMessage, width=28, bg='white', fg='black', relief=FLAT, font=("segoe ui", 11))
 textEntry.grid(row=0, column=0, columnspan=2)
@@ -190,4 +190,7 @@ textVoice.grid(row=0, column=3, padx=(4,0))
 welcome()
 time()
 currentDate()
+
+copyrightLabel = Label(textMessage, text="Copyright © Khoa Nguyen - All Rights Reserved", font=("segoe ui", 7), bg=COLOR, fg=TEXTCOLOR)
+copyrightLabel.grid(row=1, column=0, columnspan=4, padx=30, pady=(10,0))
 screen.mainloop()
